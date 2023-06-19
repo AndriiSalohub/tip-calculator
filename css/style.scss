@@ -23,6 +23,25 @@ body {
     grid-template-columns: repeat(2, 1fr);
 }
 
+.button {
+    background-color: #00474b;
+    padding: 10px;
+    border-radius: 12px;
+    color: #fff;
+    font-family: "Lato", sans-serif;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+        background-color: #c5e4e7;
+        color: #00474b;
+        transition: all 0.4s ease-in-out;
+    }
+    &.active {
+        background-color: #c5e4e7;
+        color: #00474b;
+        transition: all 0.4s ease-in-out;
+    }
+}
+
 .calculation {
     &__block {
         position: relative;
@@ -41,26 +60,11 @@ body {
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 10px;
             text-align: center;
+            &-custom {
+                background-color: #f3f8fb;
+                color: #498488;
+            }
         }
-    }
-}
-
-.button {
-    background-color: #00474b;
-    padding: 10px;
-    border-radius: 12px;
-    color: #fff;
-    font-family: "Lato", sans-serif;
-    transition: all 0.4s ease-in-out;
-    &:hover {
-        background-color: #c5e4e7;
-        color: #00474b;
-        transition: all 0.4s ease-in-out;
-    }
-    &.active {
-        background-color: #c5e4e7;
-        color: #00474b;
-        transition: all 0.4s ease-in-out;
     }
 }
 
