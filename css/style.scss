@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Quicksand:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Quicksand:wght@700&family=VT323&display=swap");
 
 * {
     box-sizing: border-box;
@@ -58,6 +58,19 @@ body {
     }
 }
 
+.amount {
+    background-color: #00474b;
+    margin-left: 30px;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.first-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .label {
     font-family: "Quicksand", sans-serif;
     font-weight: 700;
@@ -80,4 +93,23 @@ body {
         border: 1px solid green;
         transition: border 1s ease-in-out;
     }
+}
+
+.title {
+    color: #fff;
+    font-family: "VT323", monospace;
+    font-size: 20px;
+}
+
+.total-amount {
+    color: #fff;
+    font-family: "VT323", monospace;
+    font-size: 50px;
+    color: #1ac4aa;
+}
+
+span {
+    display: block;
+    font-size: 16px;
+    color: #498488;
 }
