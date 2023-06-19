@@ -48,6 +48,13 @@ if (localStorage.getItem("totalTipPerPerson")) {
     billInput.value = localStorage.getItem("bill");
     numberOfPeopleInput.value = localStorage.getItem("numberOfPeople");
     tip = localStorage.getItem("tip");
+    tipsBtns.forEach((tipBtn) => {
+        if (
+            tipBtn.getAttribute("data-percent") == localStorage.getItem("tip")
+        ) {
+            tipBtn.classList.add("active");
+        }
+    });
     calcTotal();
 }
 
@@ -63,6 +70,8 @@ numberOfPeopleInput.addEventListener("input", () => {
 
 tipsBtns.forEach((tipBtn) => {
     tipBtn.addEventListener("click", () => {
+        tipsBtns.forEach((tip) => tip.classList.remove("active"));
+        tipBtn.classList.add("active");
         tip = tipBtn.getAttribute("data-percent");
         localStorage.setItem("tip", +tip);
         calcTotal();
@@ -74,5 +83,8 @@ resetBtn.addEventListener("click", () => {
     numberOfPeopleInput.value = "";
     tip = "";
     localStorage.clear();
+    tipsBtns.forEach((tipBtn) => {
+        tipBtn.classList.remove("active");
+    });
     calcTotal();
 });

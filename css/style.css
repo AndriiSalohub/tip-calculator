@@ -55,6 +55,11 @@ body {
   color: #00474b;
   transition: all 0.4s ease-in-out;
 }
+.button.active {
+  background-color: #c5e4e7;
+  color: #00474b;
+  transition: all 0.4s ease-in-out;
+}
 
 .amount {
   background-color: #00474b;
