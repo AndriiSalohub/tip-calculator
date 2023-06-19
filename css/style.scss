@@ -32,14 +32,36 @@ body {
             left: 7px;
         }
     }
+    &__tip {
+        margin-top: 30px;
+        &-list {
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            text-align: center;
+            &-item {
+                background-color: #00474b;
+                padding: 10px;
+                border-radius: 12px;
+                color: #fff;
+                font-family: "Lato", sans-serif;
+                transition: all 0.4s ease-in-out;
+                &:hover {
+                    background-color: #c5e4e7;
+                    color: #00474b;
+                    transition: all 0.4s ease-in-out;
+                }
+            }
+        }
+    }
 }
 
 .label {
     font-family: "Quicksand", sans-serif;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 15px;
     color: #646869;
-    padding-bottom: 2px;
 }
 
 .input {
@@ -51,6 +73,7 @@ body {
     font-family: "Lato", sans-serif;
     border-radius: 6px;
     position: relative;
+    margin-top: 5px;
     &:hover {
         border: 1px solid green;
         transition: border 1s ease-in-out;

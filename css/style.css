@@ -30,13 +30,35 @@ body {
   top: 30px;
   left: 7px;
 }
+.calculation__tip {
+  margin-top: 30px;
+}
+.calculation__tip-list {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  text-align: center;
+}
+.calculation__tip-list-item {
+  background-color: #00474b;
+  padding: 10px;
+  border-radius: 12px;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  transition: all 0.4s ease-in-out;
+}
+.calculation__tip-list-item:hover {
+  background-color: #c5e4e7;
+  color: #00474b;
+  transition: all 0.4s ease-in-out;
+}
 
 .label {
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 15px;
   color: #646869;
-  padding-bottom: 2px;
 }
 
 .input {
@@ -48,6 +70,7 @@ body {
   font-family: "Lato", sans-serif;
   border-radius: 6px;
   position: relative;
+  margin-top: 5px;
 }
 .input:hover {
   border: 1px solid green;
