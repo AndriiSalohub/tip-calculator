@@ -61,11 +61,14 @@ body {
   border-radius: 25px;
   padding: 20px;
 }
-
-.first-block {
+.amount-block {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.first-block {
+  margin-bottom: 20px;
 }
 
 .label {
