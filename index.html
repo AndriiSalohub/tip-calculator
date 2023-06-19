@@ -11,7 +11,7 @@
         <img src="images/logo.svg" alt="logo" class="logo" />
         <div class="wrapper">
             <div class="calculation">
-                <div class="calculation__bill">
+                <div class="calculation__bill calculation__block">
                     <label
                         for="bill-input"
                         class="calculation__bill-label label"
@@ -25,7 +25,7 @@
                     <img
                         src="images/icon-dollar.svg"
                         alt=""
-                        class="calculation__bill-img"
+                        class="calculation__bill-img calculation__block-img"
                     />
                 </div>
                 <div class="calculation__tip">
@@ -40,6 +40,23 @@
                         <li class="calculation__tip-list-item">5%</li>
                         <li class="calculation__tip-list-item">5%</li>
                     </ul>
+                </div>
+                <div class="calculation__number-of-people calculation__block">
+                    <label
+                        for="number-of-people"
+                        class="calculation__number-of-people-label label"
+                        >Number of People</label
+                    >
+                    <input
+                        type="number"
+                        class="calculation__number-of-people-input input"
+                        id="number-of-people-input"
+                    />
+                    <img
+                        src="images/icon-person.svg"
+                        alt=""
+                        class="calculation__number-of-people-img calculation__block-img"
+                    />
                 </div>
             </div>
             <div class="amount"></div>

@@ -22,16 +22,17 @@ body {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.calculation__bill {
+.calculation__block {
   position: relative;
 }
-.calculation__bill-img {
+.calculation__block-img {
   position: absolute;
-  top: 30px;
+  top: 35px;
   left: 7px;
 }
 .calculation__tip {
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 .calculation__tip-list {
   margin-top: 10px;
@@ -71,6 +72,7 @@ body {
   border-radius: 6px;
   position: relative;
   margin-top: 5px;
+  width: 100%;
 }
 .input:hover {
   border: 1px solid green;
