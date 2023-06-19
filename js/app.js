@@ -5,6 +5,7 @@ const numberOfPeopleInput = document.querySelector(
 const tipsBtns = document.querySelectorAll(".calculation__tip-list-item");
 const totalPerPerson = document.querySelector(".amout__tip-total");
 const totalTipPerPerson = document.querySelector(".amout__tip-total-amount");
+const resetBtn = document.querySelector(".amount__reset-btn");
 let tip;
 
 const calcTotal = () => {
@@ -40,4 +41,11 @@ tipsBtns.forEach((tipBtn) => {
         tip = tipBtn.getAttribute("data-percent");
         calcTotal();
     });
+});
+
+resetBtn.addEventListener("click", () => {
+    billInput.value = "";
+    numberOfPeopleInput.value = "";
+    tip = "";
+    calcTotal();
 });
