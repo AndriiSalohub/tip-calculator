@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Quicksand:wght@700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #c5e4e7;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    padding-top: 20vh;
+}
+
+.wrapper {
+    background-color: #fff;
+    margin: 50px 360px;
+    border-radius: 25px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.calculation {
+    &__bill {
+        position: relative;
+        &-img {
+            position: absolute;
+            top: 30px;
+            left: 7px;
+        }
+    }
+}
+
+.label {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: #646869;
+    padding-bottom: 2px;
+}
+
+.input {
+    display: block;
+    background-color: #f3f8fb;
+    text-align: right;
+    padding: 10px;
+    color: #003c34;
+    font-family: "Lato", sans-serif;
+    border-radius: 6px;
+    position: relative;
+    &:hover {
+        border: 1px solid green;
+        transition: border 1s ease-in-out;
+    }
+}
