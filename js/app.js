@@ -6,6 +6,7 @@ const tipsBtns = document.querySelectorAll(".calculation__tip-list-item");
 const totalPerPerson = document.querySelector(".amout__tip-total");
 const totalTipPerPerson = document.querySelector(".amout__tip-total-amount");
 const resetBtn = document.querySelector(".amount__reset-btn");
+const customTip = document.querySelector(".calculation__tip-list-custom input");
 let tip;
 
 const calcTotal = () => {
@@ -16,14 +17,14 @@ const calcTotal = () => {
     }
 
     totalPerPerson.textContent = `\$${(
-        (+billInput.value - +billInput.value * (+tip / 100)) /
+        (+billInput.value + +billInput.value * (+tip / 100)) /
         +numberOfPeopleInput.value
     ).toFixed(2)}`;
 
     localStorage.setItem(
         "totalPerPerson",
         (
-            (+billInput.value - +billInput.value * (+tip / 100)) /
+            (+billInput.value + +billInput.value * (+tip / 100)) /
             +numberOfPeopleInput.value
         ).toFixed(2)
     );
@@ -70,6 +71,10 @@ numberOfPeopleInput.addEventListener("input", () => {
 
 tipsBtns.forEach((tipBtn) => {
     tipBtn.addEventListener("click", () => {
+        customTip.value = "Custom";
+        customTip.style.width = "100%";
+        customTip.style.textAlign = "center";
+        customTip.setAttribute("type", "button");
         tipsBtns.forEach((tip) => tip.classList.remove("active"));
         tipBtn.classList.add("active");
         tip = tipBtn.getAttribute("data-percent");
@@ -87,4 +92,18 @@ resetBtn.addEventListener("click", () => {
         tipBtn.classList.remove("active");
     });
     calcTotal();
+});
+
+customTip.addEventListener("click", () => {
+    tipsBtns.forEach((tipBtn) => {
+        tipBtn.classList.remove("active");
+    });
+    customTip.setAttribute("type", "number");
+    customTip.style.width = "50%";
+    customTip.style.textAlign = "right";
+    customTip.addEventListener("input", () => {
+        tip = customTip.value;
+        localStorage.setItem("tip", +customTip.value);
+        calcTotal();
+    });
 });

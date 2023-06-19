@@ -22,6 +22,25 @@ body {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.button {
+  background-color: #00474b;
+  padding: 10px;
+  border-radius: 12px;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  transition: all 0.4s ease-in-out;
+}
+.button:hover {
+  background-color: #c5e4e7;
+  color: #00474b;
+  transition: all 0.4s ease-in-out;
+}
+.button.active {
+  background-color: #c5e4e7;
+  color: #00474b;
+  transition: all 0.4s ease-in-out;
+}
+
 .calculation__block {
   position: relative;
 }
@@ -41,24 +60,9 @@ body {
   grid-gap: 10px;
   text-align: center;
 }
-
-.button {
-  background-color: #00474b;
-  padding: 10px;
-  border-radius: 12px;
-  color: #fff;
-  font-family: "Lato", sans-serif;
-  transition: all 0.4s ease-in-out;
-}
-.button:hover {
-  background-color: #c5e4e7;
-  color: #00474b;
-  transition: all 0.4s ease-in-out;
-}
-.button.active {
-  background-color: #c5e4e7;
-  color: #00474b;
-  transition: all 0.4s ease-in-out;
+.calculation__tip-list-custom {
+  background-color: #f3f8fb;
+  color: #498488;
 }
 
 .amount {
