@@ -110,6 +110,10 @@ body {
   margin-top: 5px;
   width: 100%;
 }
+.input:focus {
+  border: 1px solid green;
+  transition: border 1s ease-in-out;
+}
 .input:hover {
   border: 1px solid green;
   transition: border 1s ease-in-out;
