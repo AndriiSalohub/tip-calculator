@@ -112,6 +112,10 @@ body {
     position: relative;
     margin-top: 5px;
     width: 100%;
+    &:focus {
+        border: 1px solid green;
+        transition: border 1s ease-in-out;
+    }
     &:hover {
         border: 1px solid green;
         transition: border 1s ease-in-out;
