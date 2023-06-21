@@ -8,4 +8,4 @@ This web application is designed to calculate tips based on the number of people
 
 # Deployed version of the application
 - netlify - https://delightful-gumption-abda71.netlify.app
-- vercel - tip-calculator-7kaq64tra-andriisalohub.vercel.app
+- vercel - tip-calculator-ebon-ten.vercel.app
